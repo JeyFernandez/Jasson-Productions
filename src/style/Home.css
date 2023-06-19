@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+}
+
+/* navar */
+.inicio {
+  background-image: linear-gradient(
+    180deg,
+    #00000054 0,
+    #191f2c56 50%,
+    #00087394 100%
+  );
+}
+.banner {
+  position: relative;
+  /* background-image: url(../img/fondo.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header {
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.container .btn-menu,
+.logo {
+  margin-top: 2px;
+  float: left;
+  line-height: 100px;
+  transition: 0.4s;
+}
+.container .btn-menu,
+.logo:hover {
+  transform: scale(1.05);
+}
+.container .btn-menu {
+  font-size: 8px;
+  cursor: pointer;
+}
+.container .menu {
+  float: right;
+  margin-right: 2%;
+  line-height: 10px;
+}
+.container .menu a {
+  display: inline-block;
+  padding: 12px;
+  line-height: normal;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.4s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 0.95rem;
+  margin-top: 2%;
+  margin-right: 3px;
+}
+.container .menu .a {
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.container .menu a:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+/* Buscador */
+
+/* Banner */
+.banner .bg {
+  width: 100%;
+}
+.banner .bg img {
+  display: block;
+  margin: 20px auto;
+}
+.bg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.bg .text {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+/* inputs */
+.search {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #003cff;
+  --border-radius: 30px;
+  --after-border-radius: 3px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+svg {
+  margin-bottom: -8px;
+}
+
+.descriptions p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  color: rgb(0, 112, 240);
+  font-weight: bold;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+}
+.marge {
+  padding: 5px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.list .container {
+  width: 250px;
+  height: 254px;
+  background: #cdf3f1;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  margin: 10px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.22);
+}
+.list .container:hover {
+  border: 2px solid #0cbbc8;
+  transform: scale(1.05);
+}
+.list .container:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+.title-cards {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #2e0cc8;
+}
+.list ul {
+  margin-left: 25%;
+  list-style: none;
+}
+.list ul li {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(28, 0, 187);
+}
+.img-cards {
+  display: flex;
+  flex-direction: column;
+}
+.img-cards h1 {
+  font-size: 20px;
+  margin: 10px;
+  color: #1d1425;
+}
+.imagenContainer img {
+  border: 2px solid white;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  margin: 10px;
+}
+
+.imagenContainer img:hover {
+  border: 2px solid #0cbbc8;
+  transform: scale(1.02);
+}
+
+/* footer */
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.containerFooter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
